@@ -1,0 +1,22 @@
+{
+  "name": "geneTranslator-R",
+  "build": {
+    "dockerfile": "../tools/geneTranslator.Dockerfile"
+  },
+  "workspaceFolder": "/usr/src/app",
+  "extensions": [
+    "REditorSupport.r",
+    "vscode-R",
+    "ms-vscode-remote.remote-containers"
+  ],
+  "settings": {
+    "r.rterm.linux": "/usr/local/bin/R",
+    "r.sessionWatcher": true,
+    "r.lsp.debug": true,
+    "r.lsp.diagnostics": false
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/usr/src/app,type=bind"
+  ],
+  "remoteUser": "root"
+}
